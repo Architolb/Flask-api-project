@@ -7,3 +7,8 @@ app.config.from_object(Config)
 
 
 from . import routes
+
+
+
+if __name__ == 'main':
+    app.run(debug=True)
