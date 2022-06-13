@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from flask import Blueprint
 import requests as r
 from marvel import Marvel 
 # m=Marvel("58a542f44f06c07f2cd106c20a53ea37","2a38bb0597f9942fea16b293c9a92e72505fdc41")
@@ -25,3 +26,6 @@ def marvelcharacters():
     if data.status_code == 200:
         data = data.json()
     return render_template('marvel.html', data=data)
+
+auth = Blueprint('auth', __name__, template_folder='auth_templates', url_prefixes='/auth')
+
