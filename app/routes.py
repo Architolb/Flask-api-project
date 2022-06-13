@@ -27,5 +27,5 @@ def marvelcharacters():
         data = data.json()
     return render_template('marvel.html', data=data)
 
-auth = Blueprint('auth', __name__, template_folder='auth_templates', url_prefixes='/auth')
+
 
